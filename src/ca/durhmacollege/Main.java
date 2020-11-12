@@ -31,6 +31,7 @@ public class Main
         // Define score variable
 
         int score;
+        float average = 0.0f;
 
         // Input
 
@@ -73,6 +74,20 @@ public class Main
 
         // Output
 
+        for (int b = 0; b <= 2; b++)
+        {
+            System.out.println("Score details for " + names[b] + ":");
 
+            for (int s = 0; s <= 1; s++)
+            {
+                System.out.println("Game #" + (s + 1) + ":    " + scores[b][s]);
+                average += scores[b][s];
+            }
+
+            average = average / 2;
+            System.out.printf("Average for " + names[b] + ": %1f", average);
+            System.out.println("");
+            average = 0.0f;
+        }
     }
 }
